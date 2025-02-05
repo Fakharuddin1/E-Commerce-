@@ -7,13 +7,14 @@ import { useCartContext } from "@/context/CartContext";
 import Link from "next/link";
 import Swal from "sweetalert2";
 
-const sanity = sanityClient({
-  projectId: "2srh4ekv",
-  dataset: "productions",
+const client = createClient({
+  projectId: "9f3ykjul",
+  dataset: "production",
   apiVersion: '2025-01-18',
-  token:  process.env.SANITY_API_TOKEN,
-  useCdn: true,
+  useCdn: true, // Use `false` to always fetch fresh data
+  token: process.env.SANITY_API_TOKEN, // Securely use the token
 });
+
 
 interface Project {
   _id: string;
