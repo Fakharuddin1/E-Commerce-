@@ -7,7 +7,7 @@ import { useCartContext } from "@/context/CartContext";
 import Link from "next/link";
 import Swal from "sweetalert2";
 
-const client = createClient({
+const sanity = sanityClient({
   projectId: "9f3ykjul",
   dataset: "production",
   apiVersion: '2025-01-18',
