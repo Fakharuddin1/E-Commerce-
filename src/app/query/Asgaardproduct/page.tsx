@@ -7,12 +7,14 @@ import Link from 'next/link';
 
 
 const sanity = sanityClient({
-    projectId: "2srh4ekv",
-    dataset: "productions",
-    apiVersion: '2025-01-18',
-    token:  process.env.SANITY_API_TOKEN,
-    useCdn: true,
-  });
+  projectId: "9f3ykjul",
+  dataset: "production",
+  apiVersion: '2025-01-18',
+  useCdn: true, // Use `false` to always fetch fresh data
+  token: process.env.SANITY_API_TOKEN, // Securely use the token
+});
+
+ 
 
 interface project {
     slug: any;
